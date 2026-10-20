@@ -96,3 +96,14 @@ var fizzBuzz = function(n) {
 
     return result;
 };
+
+
+// Problem 10: Running Sum of 1D Array
+var runningSum = function(nums) {
+    let total = 0;
+
+    return nums.map(num => {
+        total += num;
+        return total;
+    });
+};
