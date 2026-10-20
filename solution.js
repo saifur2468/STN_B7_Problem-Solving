@@ -69,3 +69,9 @@ var positiveSum = function(arr) {
 var summation = function(num) {
     return (num * (num + 1)) / 2;
 };
+
+
+// Problem 8: Convert a Boolean to a String
+var booleanToString = function(b) {
+    return String(b);
+};
