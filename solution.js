@@ -164,3 +164,26 @@ var moveZeroes = function(nums) {
         writeIndex++;
     }
 };
+
+
+
+
+
+// Problem 15: Merge Sorted Array
+var merge = function(nums1, m, nums2, n) {
+    let i = m - 1;
+    let j = n - 1;
+    let writeIndex = m + n - 1;
+
+    while (j >= 0) {
+        if (i >= 0 && nums1[i] > nums2[j]) {
+            nums1[writeIndex] = nums1[i];
+            i--;
+        } else {
+            nums1[writeIndex] = nums2[j];
+            j--;
+        }
+
+        writeIndex--;
+    }
+};
