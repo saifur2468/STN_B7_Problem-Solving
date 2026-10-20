@@ -40,3 +40,11 @@ var timeConversion = function(s) {
 
     return `${String(hour).padStart(2, "0")}:${minutes}:${seconds}`;
 }; 
+
+
+
+
+// Problem 4: String Repeat
+var repeatStr = function(n, s) {
+    return s.repeat(n);
+};
