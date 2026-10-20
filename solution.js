@@ -55,3 +55,11 @@ var repeatStr = function(n, s) {
 var solution = function(str) {
     return str.split("").reverse().join("");
 }; 
+
+
+// Problem 6: Sum of Positive
+var positiveSum = function(arr) {
+    return arr.reduce((sum, value) => {
+        return sum + (value > 0 ? value : 0);
+    }, 0);
+};
