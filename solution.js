@@ -13,4 +13,12 @@
  }
 
 
+// Problem 2: Grading Students
+var gradingStudents = function(grades) {
+    return grades.map(grade => {
+        if (grade < 38) return grade;
 
+        const nextMultiple = Math.ceil(grade / 5) * 5;
+        return nextMultiple - grade < 3 ? nextMultiple : grade;
+    });
+};
