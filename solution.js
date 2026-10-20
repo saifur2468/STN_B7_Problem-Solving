@@ -22,3 +22,21 @@ var gradingStudents = function(grades) {
         return nextMultiple - grade < 3 ? nextMultiple : grade;
     });
 };
+
+
+
+
+// Problem 3: Time Conversion
+var timeConversion = function(s) {
+    const period = s.slice(-2);
+    const [hourText, minutes, seconds] = s.slice(0, -2).split(":");
+    let hour = Number(hourText);
+
+    if (period === "AM" && hour === 12) {
+        hour = 0;
+    } else if (period === "PM" && hour !== 12) {
+        hour += 12;
+    }
+
+    return `${String(hour).padStart(2, "0")}:${minutes}:${seconds}`;
+}; 
