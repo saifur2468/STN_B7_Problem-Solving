@@ -63,3 +63,9 @@ var positiveSum = function(arr) {
         return sum + (value > 0 ? value : 0);
     }, 0);
 };
+
+
+// Problem 7: Grasshopper Summation
+var summation = function(num) {
+    return (num * (num + 1)) / 2;
+};
