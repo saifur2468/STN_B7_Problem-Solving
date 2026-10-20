@@ -138,3 +138,9 @@ var removeDuplicates = function(nums) {
 
     return uniqueIndex;
 };
+
+
+// Problem 13: Contains Duplicate
+var containsDuplicate = function(nums) {
+    return new Set(nums).size !== nums.length;
+};
