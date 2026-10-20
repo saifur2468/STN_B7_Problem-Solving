@@ -107,3 +107,16 @@ var runningSum = function(nums) {
         return total;
     });
 };
+
+
+// Problem 11: Richest Customer Wealth
+var maximumWealth = function(accounts) {
+    let maximum = 0;
+
+    for (const account of accounts) {
+        const wealth = account.reduce((sum, amount) => sum + amount, 0);
+        maximum = Math.max(maximum, wealth);
+    }
+
+    return maximum;
+};
