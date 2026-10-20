@@ -166,9 +166,6 @@ var moveZeroes = function(nums) {
 };
 
 
-
-
-
 // Problem 15: Merge Sorted Array
 var merge = function(nums1, m, nums2, n) {
     let i = m - 1;
@@ -187,24 +184,6 @@ var merge = function(nums1, m, nums2, n) {
         writeIndex--;
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Problem 16: 3Sum
 var threeSum = function(nums) {
@@ -252,5 +231,22 @@ var threeSum = function(nums) {
         }
     }
 
+    return result;
+};
+
+// Problem 17: Plus One
+var plusOne = function(digits) {
+    const result = [...digits];
+
+    for (let i = result.length - 1; i >= 0; i--) {
+        if (result[i] < 9) {
+            result[i]++;
+            return result;
+        }
+
+        result[i] = 0;
+    }
+
+    result.unshift(1);
     return result;
 };
