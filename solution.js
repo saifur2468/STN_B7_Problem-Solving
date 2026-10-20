@@ -187,3 +187,70 @@ var merge = function(nums1, m, nums2, n) {
         writeIndex--;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Problem 16: 3Sum
+var threeSum = function(nums) {
+    const sorted = [...nums].sort((a, b) => a - b);
+    const result = [];
+
+    for (let i = 0; i < sorted.length - 2; i++) {
+        if (i > 0 && sorted[i] === sorted[i - 1]) continue;
+        if (sorted[i] > 0) break;
+
+        let left = i + 1;
+        let right = sorted.length - 1;
+
+        while (left < right) {
+            const sum = sorted[i] + sorted[left] + sorted[right];
+
+            if (sum === 0) {
+                result.push([
+                    sorted[i],
+                    sorted[left],
+                    sorted[right]
+                ]);
+
+                left++;
+                right--;
+
+                while (
+                    left < right &&
+                    sorted[left] === sorted[left - 1]
+                ) {
+                    left++;
+                }
+
+                while (
+                    left < right &&
+                    sorted[right] === sorted[right + 1]
+                ) {
+                    right--;
+                }
+            } else if (sum < 0) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+    }
+
+    return result;
+};
