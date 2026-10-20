@@ -144,3 +144,23 @@ var removeDuplicates = function(nums) {
 var containsDuplicate = function(nums) {
     return new Set(nums).size !== nums.length;
 };
+
+
+
+
+// Problem 14: Move Zeroes
+var moveZeroes = function(nums) {
+    let writeIndex = 0;
+
+    for (let readIndex = 0; readIndex < nums.length; readIndex++) {
+        if (nums[readIndex] !== 0) {
+            nums[writeIndex] = nums[readIndex];
+            writeIndex++;
+        }
+    }
+
+    while (writeIndex < nums.length) {
+        nums[writeIndex] = 0;
+        writeIndex++;
+    }
+};
