@@ -263,3 +263,14 @@ var reverseString = function(s) {
         right--;
     }
 };
+
+
+// Problem 19: Length of Last Word
+var lengthOfLastWord = function(s) {
+    const trimmed = s.trim();
+
+    if (trimmed.length === 0) return 0;
+
+    const words = trimmed.split(/\s+/);
+    return words[words.length - 1].length;
+};
